@@ -6,7 +6,6 @@ services:
   - type: web
     name: nodejs-argo
     runtime: node
-    repo: https://github.com/你的用户名/你的仓库名
     plan: free
     region: singapore
     buildCommand: npm install
