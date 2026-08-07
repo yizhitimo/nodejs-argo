@@ -1,0 +1,45 @@
+# Render Blueprint 配置文件
+# 使用方法: 把这个文件放到项目根目录，推到 GitHub
+# 然后在 Render Dashboard 点 "New → Blueprint" 连接仓库即可一键部署
+
+services:
+  - type: web
+    name: nodejs-argo
+    runtime: node
+    repo: https://github.com/你的用户名/你的仓库名
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: node index.js
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: UUID
+        sync: false
+      - key: ARGO_DOMAIN
+        sync: false
+      - key: ARGO_AUTH
+        sync: false
+      - key: NAME
+        value: Render
+      - key: CFIP
+        value: icook.hk
+      - key: CFPORT
+        value: "443"
+      - key: FILE_PATH
+        value: ./tmp
+      - key: SUB_PATH
+        value: sub
+      - key: UPLOAD_URL
+        sync: false
+      - key: PROJECT_URL
+        sync: false
+      - key: NEZHA_SERVER
+        sync: false
+      - key: NEZHA_KEY
+        sync: false
+      - key: AUTO_ACCESS
+        value: "false"
+      - key: SHOW_LOG
+        value: "true"
