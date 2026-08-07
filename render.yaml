@@ -3,7 +3,7 @@
 # 然后在 Render Dashboard 点 "New → Blueprint" 连接仓库即可一键部署
 
 services:
-  - type: webservice
+  - type: web
     name: nodejs-argo
     runtime: node
     plan: free
