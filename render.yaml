@@ -6,7 +6,7 @@ services:
   - type: web
     name: nodejs-argo
     Language: node
-    Instance Type: free
+    plan: free
     region: singapore
     Build Command: npm install
     Start Command: node index.js
