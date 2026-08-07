@@ -5,11 +5,11 @@
 services:
   - type: web
     name: nodejs-argo
-    runtime: node
-    plan: free
+    Language: node
+    Instance Type: free
     region: singapore
-    buildCommand: npm install
-    startCommand: node index.js
+    Build Command: npm install
+    Start Command: node index.js
     healthCheckPath: /
     envVars:
       - key: PORT
